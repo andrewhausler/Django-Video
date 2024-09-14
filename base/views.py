@@ -6,6 +6,10 @@ from django.contrib.auth import authenticate, login, logout
 from .models import Room, Topic
 from .form import RoomForm
 
+def logoutUser(request):
+    logout(request)
+    return redirect("home")
+
 def loginPage(request):
     username = ""
     password = ""
